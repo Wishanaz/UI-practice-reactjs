@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  height: 70px;
+  width: 100%;
+  background-color: #536265;
+  color: white;
+}
+.main .left {
+  display: flex;
+  gap: 10px;
+  font-size: 1rem;
+}
+.main .center {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.main .right {
+  display: flex;
+  gap: 10px;
+  font-size: 1rem;
+}
+.hero-main {
+  position: relative;
+  width: 100%; /* instead of 100vw */
+  height: 90vh;
+  display: flex;
+  justify-content: flex-end; /* right */
+  align-items: flex-start; /* top */
+  padding-top: 9rem;
+  padding-right: 10rem;
+  overflow: hidden; /* ensure pseudo-element doesn't overflow */
+}
+
+.hero-main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.epicgardening.com/wp-content/uploads/2025/01/plan-spring-flower-garden.jpg");
+  background-size: cover;
+  background-position: bottom;
+  filter: brightness(60%);
+  z-index: 0; /* behind the text */
+}
+
+.hero-main .heading {
+  position: relative; /* bring text above the pseudo-element */
+  z-index: 1;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2rem;
+}
+.parent {
+  padding: 2rem 0;
+}
+.quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f2ed;
+}
+.quote h2 {
+  padding: 3rem;
+}
+.quote h2 span {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.images {
+  display: flex;
+  gap: 0.8rem; /* space between images */
+  flex-wrap: wrap; /* wrap to next line if screen is small */
+  margin-top: 2rem;
+  padding-left: 2rem;
+}
+
+.images img {
+  width: 200px; /* adjust size as needed */
+  height: 300px;
+  object-fit: cover;
+  border-radius: 6px; /* rounded corners */
+}
+
+.info-main {
+  background-color: #536265;
+  width: 100%;
+  min-height: 70vh; 
+  display: flex;
+  align-items: center; /* vertical centering */
+  justify-content: center; /* horizontal centering of the whole container */
+  padding: 2rem 7rem ;
+  
+}
+
+.info-main .left,
+.info-main .right {
+  width: 50%;
+  display: flex;
+  flex-direction: column; /* stack content vertically */
+  /* justify-content: center;  */
+  /* align-items: flex-start;  */
+}
+
+.info-main .left h2 span{
+    color: white;
+    display: block;
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    
+}
+.info-main .left p span{
+    color: white;
+    font-size: 1rem;
+    display: block;
+    font-style: italic;
+
+}
+.info-main .left h2 {
+  margin-bottom: 1rem;
+}
+
+.info-main .left p {
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 0.7rem;
+
+}
+.info-main .left-content .bottom{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+
+}
+.info-main .bottom .arrow h4{
+    color: white;
+    font-size: 2rem;
+}
+.info-main .left button{
+    padding: 0.7rem 3rem;
+    color: black;
+}
+.info-main .right {
+    align-items: center; 
+    padding-left: 5rem;
+}
+
+.info-main .right img {
+  max-width: 50%; /* make image responsive */
+  border-radius: 10px;
+}
+
+.Number-parent{
+    width: 100%;
+    padding: 4rem;
+}
+.Number-parent .numbers{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+
+}
+.Number-parent .num h2{
+    font-size: 3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-bottom: 0.5rem;    
+}
+.Number-parent .num p{
+    font-size: 0.7rem;
+    color: rgb(38, 35, 35);
+}
+
+.services-section {
+  padding: 4rem 2rem;
+  background-color: #DDAFAF;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: white;
+  width: 250px;
+  padding: 2rem 1rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service-card:hover {
+  
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+
+.footer {
+  background-color: #536265;
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #f5d6c6; /* subtle hover color */
+}
+
+
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+  /* Header */
+  .main {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 1rem;
+  }
+  .main .left, .main .center, .main .right {
+    gap: 5px;
+    font-size: 0.9rem;
+  }
+
+  /* Hero Section */
+  .hero-main {
+    padding-top: 5rem;
+    padding-right: 2rem;
+    height: 80vh;
+  }
+  .hero-main .heading {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  /* Quote Section */
+  .quote h2 {
+    padding: 2rem 1rem;
+  }
+  .quote h2 span {
+    font-size: 1.2rem;
+  }
+  .images {
+    justify-content: center;
+    padding-left: 0;
+  }
+  .images img {
+    width: 140px;
+    height: 200px;
+  }
+
+  /* Info Section */
+  .info-main {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+  .info-main .left, .info-main .right {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    align-items: center;
+    text-align: center;
+  }
+  .info-main .right img {
+    max-width: 80%;
+    margin-top: 2rem;
+  }
+  .info-main .left-content .bottom {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Numbers Section */
+  .Number-parent .numbers {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* Services Section */
+  .services-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .service-card {
+    width: 80%;
+  }
+
+  /* Footer */
+  .footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
